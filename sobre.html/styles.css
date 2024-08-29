@@ -1,0 +1,117 @@
+/* Reset básico para o layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Garante que o HTML e o body ocupem toda a altura da página */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Estilo para o menu de navegação */
+nav {
+    margin-top: 10px; /* Espaçamento superior para separar do título */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Usa Flexbox para alinhar os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+}
+
+nav ul li {
+    margin: 0 15px; /* Espaçamento entre os botões */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px; /* Adiciona um pouco de padding para tornar os botões maiores */
+    border: 1px solid transparent; /* Adiciona uma borda transparente para o efeito de hover */
+    border-radius: 5px; /* Arredonda os cantos dos botões */
+    transition: background-color 0.3s, color 0.3s; /* Suaviza a transição de cores */
+}
+
+nav ul li a:hover {
+    background-color: #555; /* Cor de fundo ao passar o mouse */
+    color: #fff; /* Cor do texto ao passar o mouse */
+    text-decoration: none;
+}
+
+/* Estilo para o main para ocupar toda a altura da página */
+main {
+    position: relative;
+    min-height: 100vh; /* Garante que o main ocupe pelo menos a altura total da tela */
+    background-image: url('/foto2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    color: #fff; /* Define a cor do texto como branco para contraste */
+}
+
+/* Sobreposição clara para melhorar a legibilidade */
+main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3); /* Cor branca com 30% de opacidade para clarear a tela */
+    z-index: 1;
+}
+
+section {
+    position: relative;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7); /* Fundo escuro para as seções */
+    border-radius: 8px; /* Adiciona bordas arredondadas às seções */
+}
+
+section h2 {
+    border-bottom: 2px solid #fff; /* Linha de borda branca */
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    color: #fff; /* Cor do título */
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    padding: 10px 0;
+    color: #fff; /* Cor do texto da lista */
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
